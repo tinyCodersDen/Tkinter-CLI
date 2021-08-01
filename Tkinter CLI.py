@@ -26,6 +26,15 @@ while True:
                         there=True
                 if there==False:
                     print('Error: The specified window doesn\'t exist')
+            elif query[1]=='text':
+                there = False
+                for k,v in dict1.items():
+                    if k==query[2]:
+                        l1 = Label(v,text = query[3])
+                        l1.pack()
+                        there=True
+                if there==False:
+                    print('Error: The specified window doesn\'t exist')
         elif query[0]=='rename':
             if query[1] in dict1.keys():
                 dict1[query[1]].title(query[2])
